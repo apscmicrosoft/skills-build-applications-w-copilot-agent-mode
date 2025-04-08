@@ -16,6 +16,8 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Add the codespace Django REST API endpoint suffix
+CODESPACE_SUFFIX = "humble-acorn-pjw6qqwpq9qjc7p6g-8000.app.github.dev"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
