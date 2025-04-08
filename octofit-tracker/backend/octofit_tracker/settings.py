@@ -17,7 +17,10 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Add the codespace Django REST API endpoint suffix
-CODESPACE_SUFFIX = "[REPLACE-THIS-WITH-YOUR-CODESPACE-NAME]-8000.app.github.dev"
+CODESPACE_SUFFIX = os.getenv("CODESPACE_SUFFIX", "default-8000.app.github.dev")
+
+# Add a dynamic API root URL configuration
+API_ROOT_URL = os.getenv("API_ROOT_URL", f"https://{CODESPACE_SUFFIX}")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
